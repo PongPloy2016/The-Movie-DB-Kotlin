@@ -11,7 +11,7 @@ class PopularMovieAdapter(
     val itemClickListener: (Movie) -> Unit = {}
 ) : BaseListAdapter<Movie, ItemMovieBinding>(object : DiffUtil.ItemCallback<Movie>() {
     override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-        return oldItem.id == newItem.id
+        return oldItem.id == newItem.id && oldItem.index == newItem.index
     }
 
     override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {

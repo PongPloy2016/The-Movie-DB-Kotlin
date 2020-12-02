@@ -39,6 +39,12 @@
             app:destination="@id/paging_movie"
             app:popUpTo="@id/splash"
             app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_popular_movie"
+            app:destination="@id/popular_movie"
+            app:popUpTo="@id/splash"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -65,6 +71,11 @@
         android:id="@+id/paging_movie"
         android:name="com.example.moviedb.ui.screen.paging.PagingMovieFragment"
         tools:layout="@layout/fragment_paging" />
+
+    <fragment
+        android:id="@+id/popular_movie"
+        android:name="com.example.moviedb.ui.screen.popularmovie.PopularMovieFragment"
+        tools:layout="@layout/fragment_loadmore_refresh" />
 
     <dialog
         android:id="@+id/login"

@@ -22,7 +22,15 @@ class PopularMovieFragment :
 
     override val listAdapter: BaseListAdapter<Movie, out ViewDataBinding> by lazy {
         PopularMovieAdapter(
-            itemClickListener = { toMovieDetail(it) }
+            itemClickListener = {
+//                toMovieDetail(it)
+                val itemList = viewModel.itemList.value
+                itemList?.remove(it)
+                val movie = Movie(id = "1", title = "1", index = viewModel.index, poster_path = "/4ZocdxnOO6q2UbdKye2wgofLFhB.jpg")
+                ++viewModel.index
+                itemList?.add(movie)
+                viewModel.itemList.value = itemList
+            }
         )
     }
 

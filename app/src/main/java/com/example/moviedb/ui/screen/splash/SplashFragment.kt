@@ -27,10 +27,11 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>() {
 
     private fun navigateToOther() {
         getNavController()?.navigate(
-            when (2) {
+            when (3) {
                 0 -> SplashFragmentDirections.toMovieListPager()
                 1 -> SplashFragmentDirections.toPagedMovie()
                 2 -> SplashFragmentDirections.toPagingMovie()
+                3 -> SplashFragmentDirections.toPopularMovie()
                 else -> SplashFragmentDirections.toMain()
             }
         )
